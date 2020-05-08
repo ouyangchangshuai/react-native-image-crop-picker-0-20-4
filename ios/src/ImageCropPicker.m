@@ -169,28 +169,30 @@ RCT_EXPORT_METHOD(openCamera:(NSDictionary *)options
             self.reject(ERROR_PICKER_NO_CAMERA_PERMISSION_KEY, ERROR_PICKER_NO_CAMERA_PERMISSION_MSG, nil);
             return;
         }
-
-        UIImagePickerController *picker = [[UIImagePickerController alloc] init];
-        picker.delegate = self;
-        picker.allowsEditing = NO;
-        picker.sourceType = UIImagePickerControllerSourceTypeCamera;
-
-        NSString *mediaType = [self.options objectForKey:@"mediaType"];
         
-        if ([mediaType isEqualToString:@"video"]) {
-            NSArray *availableTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
-
-            if ([availableTypes containsObject:(NSString *)kUTTypeMovie]) {
-                picker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie, nil];
-                picker.videoQuality = UIImagePickerControllerQualityTypeHigh;
-            }
-        }
-
-        if ([[self.options objectForKey:@"useFrontCamera"] boolValue]) {
-            picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
-        }
-
         dispatch_async(dispatch_get_main_queue(), ^{
+
+            UIImagePickerController *picker = [[UIImagePickerController alloc] init];
+            picker.delegate = self;
+            picker.allowsEditing = NO;
+            picker.sourceType = UIImagePickerControllerSourceTypeCamera;
+
+            NSString *mediaType = [self.options objectForKey:@"mediaType"];
+        
+            if ([mediaType isEqualToString:@"video"]) {
+                NSArray *availableTypes = [UIImagePickerController availableMediaTypesForSourceType:UIImagePickerControllerSourceTypeCamera];
+
+                if ([availableTypes containsObject:(NSString *)kUTTypeMovie]) {
+                    picker.mediaTypes = [[NSArray alloc] initWithObjects:(NSString *)kUTTypeMovie, nil];
+                    picker.videoQuality = UIImagePickerControllerQualityTypeHigh;
+                }
+            }
+
+            if ([[self.options objectForKey:@"useFrontCamera"] boolValue]) {
+                picker.cameraDevice = UIImagePickerControllerCameraDeviceFront;
+            }
+
+//        dispatch_async(dispatch_get_main_queue(), ^{
             [[self getRootVC] presentViewController:picker animated:YES completion:nil];
         });
     }];
