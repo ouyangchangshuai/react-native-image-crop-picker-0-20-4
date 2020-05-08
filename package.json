@@ -1,6 +1,6 @@
 {
   "name": "react-native-image-crop-picker-modify",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "[![Backers on Open Collective](https://opencollective.com/react-native-image-crop-picker/backers/badge.svg)](#backers) [![Sponsors on Open Collective](https://opencollective.com/react-native-image-crop-picker/sponsors/badge.svg)](#sponsors)",
   "main": "index.js",
   "scripts": {
@@ -10,7 +10,7 @@
     "type": "git",
     "url": "git+https://github.com/ouyangchangshuai/react-native-image-crop-picker-0-20-4.git"
   },
-  "author": "oycs",
+  "author": "",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/ouyangchangshuai/react-native-image-crop-picker-0-20-4/issues"
