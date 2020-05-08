@@ -1,0 +1,61 @@
+{
+  "_from": "react-native-image-crop-picker@^0.24.0",
+  "_id": "react-native-image-crop-picker@0.24.1",
+  "_inBundle": false,
+  "_integrity": "sha1-RAjiuyDjwILAGR4KzwyMeh6YBOo=",
+  "_location": "/react-native-image-crop-picker",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "range",
+    "registry": true,
+    "raw": "react-native-image-crop-picker@^0.24.0",
+    "name": "react-native-image-crop-picker",
+    "escapedName": "react-native-image-crop-picker",
+    "rawSpec": "^0.24.0",
+    "saveSpec": null,
+    "fetchSpec": "^0.24.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "https://registry.npm.taobao.org/react-native-image-crop-picker/download/react-native-image-crop-picker-0.24.1.tgz",
+  "_shasum": "4408e2bb20e3c082c0191e0acf0c8c7a1e9804ea",
+  "_spec": "react-native-image-crop-picker@^0.24.0",
+  "_where": "/Users/ouyangchangshuai/Desktop/ShouZhiApp/SZPropertyApp",
+  "author": {
+    "name": "Ivan Pusic"
+  },
+  "bugs": {
+    "url": "https://github.com/ivpusic/react-native-image-crop-picker/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "Select single or multiple images, with cropping option",
+  "homepage": "https://github.com/ivpusic/react-native-image-crop-picker#readme",
+  "keywords": [
+    "react",
+    "native",
+    "react-native",
+    "image",
+    "picker",
+    "crop",
+    "cropping",
+    "multiple",
+    "camera"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "react-native-image-crop-picker",
+  "peerDependencies": {
+    "react-native": ">=0.40.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ivpusic/react-native-image-crop-picker.git"
+  },
+  "scripts": {
+    "prepublish": "rm -rf android/build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "0.24.1"
+}
